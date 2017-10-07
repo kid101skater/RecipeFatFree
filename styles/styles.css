@@ -2,3 +2,7 @@
     align-self: auto;
     margin: 0 auto;
 }
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}

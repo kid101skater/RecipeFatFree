@@ -1,5 +1,5 @@
 <?php
-require("../../../other/blogs_config.php");
+require("../../../other/recipe_config.php");
 
     try
     {
@@ -19,23 +19,26 @@ require("../../../other/blogs_config.php");
     $f3 = Base::instance();
     
     //Define a default route
-    $f3->route('GET /', function() {
+    $f3->route('GET /', function($f3) {
+        $f3->set('header','pages/navbar.html');
         echo Template::instance()->render('pages/home.html');
     });
     
     // deifine default recipe - if no recipe id is given show homepage
-    $f3->route('GET /Recipe/', function() {
-        echo Template::instance()->render('pages/home.html');
+    $f3->route('GET /Recipe/', function($f3) {
+        $f3->reroute('/');
     });
     
     
     // define view recipe route
-    $f3->route('GET /Recipe/@recipeID', function() {
+    $f3->route('GET /Recipe/@recipeID', function($f3) {
+        $f3->set('header','pages/navbar.html');
         echo Template::instance()->render('pages/recipe.html');
     });
     
     // Define create / edit recipe route
-    $f3->route('GET /', function() {
+    $f3->route('GET /', function($f3) {
+        $f3->set('header','pages/navbar.html');
         echo Template::instance()->render('pages/home.html');
     });
     
