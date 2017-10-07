@@ -11,7 +11,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="<?= ($BASE) ?>">Home</a></li>
-        <li><a href="#">Create Recipe</a></li>
+        <li><a href="<?= ($BASE) ?>/Create">Create Recipe</a></li>
       </ul>
     </div>
   </div>

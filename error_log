@@ -14,3 +14,9 @@
 [07-Oct-2017 17:32:46 America/Chicago] [IT355/RecipeFatFree/index.php:65] Base->run()
 [07-Oct-2017 17:32:53 America/Chicago] Class 'Database' not found [/home/klocke/public_html/IT355/RecipeFatFree/index.php:25]
 [07-Oct-2017 17:32:53 America/Chicago] [IT355/RecipeFatFree/index.php:65] Base->run()
+[07-Oct-2017 18:08:42 America/Chicago] HTTP 405 (POST /Create)
+[07-Oct-2017 18:08:42 America/Chicago] [IT355/RecipeFatFree/index.php:66] Base->run()
+[07-Oct-2017 18:09:22 America/Chicago] Invalid routing pattern: GET/Create
+[07-Oct-2017 18:09:22 America/Chicago] [IT355/RecipeFatFree/index.php:51] Base->route()
+[07-Oct-2017 18:09:27 America/Chicago] Invalid routing pattern: GET/Create
+[07-Oct-2017 18:09:27 America/Chicago] [IT355/RecipeFatFree/index.php:51] Base->route()

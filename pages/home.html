@@ -16,11 +16,12 @@
     
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-9 container">
+            <div class=col-sm-2></div>
+            <div class="col-sm-8 container">
             <!-- repeat card layout for each blog -->
             <repeat group="{{ @recipes }}" value="{{ @recipe }}">
                 <div class="col-sm-4">
-                    <div class="card homeBlogCards">
+                    <div class="card">
                         <img class="card-img-top img-responsive" src="{{ @recipe->getRecipeImg() }}" alt="recipe image">
                             <div class="card-block">
                                 <h4 class="card-title"><center>{{ @recipe->getRecipeTitle() }}</center></h4>
@@ -33,6 +34,7 @@
                 </div>
             </repeat>
             </div>
+            <div class=col-sm-2></div>
         </div>
     </div>
 </body>

@@ -45,13 +45,17 @@ require("../../../other/recipe_config.php");
     });
     
     // Define create recipe route
-    $f3->route('GET /Create', function($f3) {
+    $f3->route('GET|POST /Create', function($f3) {
+        
+        
+        // Check if post if(isset($_POST['title'])
+        
         $f3->set('header','pages/navbar.html');
         echo Template::instance()->render('pages/createrecipe.html');
     });
     
     // Define edit recipe route
-    $f3->route('GET /Edit/@recipeID', function($f3) {
+    $f3->route('GET|POST /Edit/@recipeID', function($f3) {
         $f3->set('header','pages/navbar.html');
         echo Template::instance()->render('pages/createrecipe.html');
     });
