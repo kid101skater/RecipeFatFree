@@ -27,3 +27,6 @@ img {
 .required{
     color: red;
 }
+.selectPadding {
+    padding-top: 100px;
+}

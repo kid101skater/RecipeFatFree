@@ -65,7 +65,20 @@
      </div>
      </div>
         <div class="col-md-4">
-            Cat selection goes here
+            <div class="selectPadding"></div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Select Catagory</div>
+                <div class="panel-body">
+                <div class="selectContainer">
+                <select name="Catagory" class="form-control" multiple title="Choose a Catagory">
+                    <option value="Dinner">Dinner</option>
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Desert">Desert</option>
+                    <option value="Snack">Snack</option>
+                    <option value="Drink">Drink</option>
+                </select>
+                </div>
+            </div>
         </div>
     </form>
    </div>
