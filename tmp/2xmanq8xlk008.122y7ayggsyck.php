@@ -13,5 +13,27 @@
 <body>
     <?php echo $this->render($header,NULL,get_defined_vars(),0); ?>
     
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-9 container">
+            <!-- repeat card layout for each blog -->
+            <?php foreach (($recipes?:[]) as $recipe): ?>
+                <div class="col-sm-4">
+                    <div class="card homeBlogCards">
+                        <img class="card-img-top img-responsive" src="" alt="recipe image">
+                            <div class="card-block">
+                                <h4 class="card-title"><center>--Recipe Name--</center></h4>
+                                <hr>
+                                    <p class="card-text"><center>--Recipe burb--</center></p>
+                                <hr>
+                                    <span>View Details button</span>
+                            </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
