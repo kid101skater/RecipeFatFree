@@ -20,12 +20,20 @@ require("../../../other/recipe_config.php");
     
     //Define a default route
     $f3->route('GET /', function($f3) {
+        
+        // get recipes from database
+        $db = new Database();
+        $recipes = $db->GetRecipes();
+        $f3->set('recipes', $recipes);
+        $f3->set('PageTitle', "Recipes with Fat Free");
+        
         $f3->set('header','pages/navbar.html');
         echo Template::instance()->render('pages/home.html');
     });
     
     // deifine default recipe - if no recipe id is given show homepage
     $f3->route('GET /Recipe/', function($f3) {
+        
         $f3->reroute('/');
     });
     
