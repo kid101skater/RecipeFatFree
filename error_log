@@ -20,3 +20,11 @@
 [07-Oct-2017 18:09:22 America/Chicago] [IT355/RecipeFatFree/index.php:51] Base->route()
 [07-Oct-2017 18:09:27 America/Chicago] Invalid routing pattern: GET/Create
 [07-Oct-2017 18:09:27 America/Chicago] [IT355/RecipeFatFree/index.php:51] Base->route()
+[07-Oct-2017 18:16:03 America/Chicago] HTTP 404 (GET /Test%20img)
+[07-Oct-2017 18:16:03 America/Chicago] [IT355/RecipeFatFree/index.php:70] Base->run()
+[07-Oct-2017 18:16:08 America/Chicago] HTTP 404 (GET /Test%20img)
+[07-Oct-2017 18:16:08 America/Chicago] [IT355/RecipeFatFree/index.php:70] Base->run()
+[07-Oct-2017 18:16:09 America/Chicago] HTTP 404 (GET /Test%20img)
+[07-Oct-2017 18:16:09 America/Chicago] [IT355/RecipeFatFree/index.php:70] Base->run()
+[07-Oct-2017 18:16:15 America/Chicago] HTTP 404 (GET /Test%20img)
+[07-Oct-2017 18:16:15 America/Chicago] [IT355/RecipeFatFree/index.php:70] Base->run()

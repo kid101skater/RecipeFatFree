@@ -15,8 +15,9 @@
 
 
 <div class="container-fluid">
+<div class="col-md-2"></div>
   <div class="row">
-   <div class="col-md-10">
+   <div class="col-md-8">
     <form method="post">
         <div class="col-md-8">
      <div class="form-group ">
@@ -69,6 +70,7 @@
     </form>
    </div>
   </div>
+<div class="col-md-2"></div>
  </div>
 </body>
 </html>
