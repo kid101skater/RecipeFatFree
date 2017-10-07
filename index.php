@@ -36,10 +36,21 @@ require("../../../other/recipe_config.php");
         echo Template::instance()->render('pages/recipe.html');
     });
     
-    // Define create / edit recipe route
-    $f3->route('GET /', function($f3) {
+    // Define create recipe route
+    $f3->route('GET /Create', function($f3) {
         $f3->set('header','pages/navbar.html');
-        echo Template::instance()->render('pages/home.html');
+        echo Template::instance()->render('pages/createrecipe.html');
+    });
+    
+    // Define edit recipe route
+    $f3->route('GET /Edit/@recipeID', function($f3) {
+        $f3->set('header','pages/navbar.html');
+        echo Template::instance()->render('pages/createrecipe.html');
+    });
+    
+    // Define edit recipe route when no id is passed
+    $f3->route('GET /Edit/', function($f3) {
+        $f3->reroute('/');
     });
     
     
