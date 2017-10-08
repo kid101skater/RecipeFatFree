@@ -32,15 +32,21 @@ require("../../../other/recipe_config.php");
     });
     
     // deifine default recipe - if no recipe id is given show homepage
-    $f3->route('GET /Recipe/', function($f3) {
-        
-        $f3->reroute('/');
-    });
+    $f3->route('GET /Recipes', function($f3)
+              {
+                session_destroy();
+                $f3->reroute('/');
+              });
     
     
     // define view recipe route
-    $f3->route('GET /Recipe/@recipeID', function($f3) {
+    $f3->route('GET|POST /Recipes/@recipeID', function($f3, $params) {
+        $db = new Database();
+        $recipeID = $params['recipeID'];
         $f3->set('header','pages/navbar.html');
+        $recipe = $db->GetRecipe($recipeID);
+        $f3->set('recipe', $recipe);
+        
         echo Template::instance()->render('pages/recipe.html');
     });
     
@@ -53,11 +59,21 @@ require("../../../other/recipe_config.php");
             echo $_POST['recipeTitle'];
             echo $_POST['recipeDetails'];
             echo $_POST['burb'];
-            $db->CreateRecipeDefault($_POST['recipeTitle'], $_POST['recipeDetails'], $_POST['burb']);
+            if(isset($_POST['recipeImg']))
+               {
+                    $postID = $db->CreateRecipe($_POST['recipeTitle'], $_POST['recipeDetails'], $_POST['burb'], $_POST['recipeImg'], $_POST['Catagory']);
+               }
+               else
+               {
+                    $postID = $db->CreateRecipeDefault($_POST['recipeTitle'], $_POST['recipeDetails'], $_POST['burb'],  $_POST['Catagory']);
+               }
+            $f3->reroute('/');
         }
-        
+        else
+        {
         $f3->set('header','pages/navbar.html');
         echo Template::instance()->render('pages/createrecipe.html');
+        }
     });
     
     // Define edit recipe route

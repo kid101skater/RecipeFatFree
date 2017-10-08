@@ -10,13 +10,14 @@ class Recipe
     /*
      * Default constructor to create a recipe.
      */
-    function __construct($id, $title, $img, $details, $burb)
+    function __construct($id, $title, $img, $details, $burb, $cat)
     {
         $this->recipeID = $id;
         $this->title = $title;
         $this->img = $img;
-        $this->details = $recipe;
+        $this->details = $details;
         $this->burb = $burb;
+        $this->cat = $cat;
     }
     
     /*
@@ -39,11 +40,16 @@ class Recipe
     
     function getRecipeDetails()
     {
-        return $this->recipe;
+        return $this->details;
     }
     
     function getRecipeBurb()
     {
         return $this->burb;
+    }
+    
+    function getRecipeCat()
+    {
+        return $this->cat;
     }
 }
