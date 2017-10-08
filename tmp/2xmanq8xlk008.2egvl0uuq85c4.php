@@ -39,7 +39,7 @@
         *
        </span>
       </label>
-      <input class="form-control" id="description" name="description" type="text"/>
+      <input class="form-control" id="burb" name="burb" type="text"/>
       <span class="help-block" id="hint_description">
        Give a short description (blurb) about your recipe
       </span>
@@ -98,9 +98,9 @@
                     rTitle.innerText = "* Please provide Title";
                     result = false;
                 }
-                if(!formR.description.value)
+                if(!formR.burb.value)
                 {
-                    rDescription.innerText = "* Please provide Description";
+                    rDescription.innerText = "* Please provide short Description";
                     result = false;
                 }
                 if(!formR.recipeDetails.value)

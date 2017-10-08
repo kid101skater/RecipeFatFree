@@ -37,4 +37,34 @@ class Database
         // return the recipes array list
         return $recipes;
     }
+    
+    // Add functionality to use a default picture
+    function CreateRecipeDefault($title, $details, $burb)
+    {
+        $img = "/imgs/default.png";
+        echo "img " + $img;
+        $this->CreateRecipe($title, $details, $burb, $img);
+    }
+    
+    // Main function to create a recipe
+    function CreateRecipe($title, $details, $burb, $img)
+    {
+        try
+        {
+            // get the db obj
+            $dbh = new PDO(DB_DSN, DB_USERNAME, DB_PASSWORD);
+        }
+        catch(PDOException $e)
+        {
+            echo "GOT A DAMN ERROR";
+             echo $e->getMessage();
+        }
+        $sql = "INSERT INTO `Recipes` (`recipeTitle`, `recipeImg`, `recipeDetails`, `recipeBurb`) VALUES(:title, :img, :details, :burb)";
+        $stmt = $dbh->prepare($sql);
+        $stmt->bindParam(':title', $title, PDO::PARAM_STR);
+        $stmt->bindParam(':details', $details, PDO::PARAM_STR);
+        $stmt->bindParam(':burb', $burb, PDO::PARAM_STR);
+        $stmt->bindParam(':img', $img, PDO::PARAM_STR);
+        $stmt->execute();
+    }
 }

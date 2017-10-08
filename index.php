@@ -47,8 +47,14 @@ require("../../../other/recipe_config.php");
     // Define create recipe route
     $f3->route('GET|POST /Create', function($f3) {
         
-        
-        // Check if post if(isset($_POST['title'])
+        $db = new Database();
+        if(isset($_POST['recipeTitle']))
+        {
+            echo $_POST['recipeTitle'];
+            echo $_POST['recipeDetails'];
+            echo $_POST['burb'];
+            $db->CreateRecipeDefault($_POST['recipeTitle'], $_POST['recipeDetails'], $_POST['burb']);
+        }
         
         $f3->set('header','pages/navbar.html');
         echo Template::instance()->render('pages/createrecipe.html');
