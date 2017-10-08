@@ -76,6 +76,25 @@ require("../../../other/recipe_config.php");
         }
     });
     
+    $f3->route('GET|POST /Catagory/@cat', function($f3, $params)
+    {
+        $db = new Database();
+        $cat = $params['cat'];
+        $recipes = $db->GetRecipesByCat($cat);
+        $f3->set('recipes', $recipes);
+        $f3->set('header','pages/navbar.html');
+        
+        echo Template::instance()->render('pages/home.html');
+    });
+    
+    
+    
+    ////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////
+    /////// NOT IMPLEMENTED YET BECAUSE TIME /////////////
+    /////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////
+    
     // Define edit recipe route
     $f3->route('GET|POST /Edit/@recipeID', function($f3) {
         $f3->set('header','pages/navbar.html');

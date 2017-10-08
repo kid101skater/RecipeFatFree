@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-md-12 container">
             
-            <div class="col-md-4 image-responsive">
+            <div class="col-md-4 img-responsive">
                 <img src="<?= ($BASE) ?>/<?= ($recipe->getRecipeImg()) ?>">
             </div>
             <div class="col-md-8">
@@ -42,6 +42,7 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-4"></div>
             </div>
         </div>
     </div>
