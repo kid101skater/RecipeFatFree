@@ -18,12 +18,12 @@
 <div class="col-md-2"></div>
   <div class="row">
    <div class="col-md-8">
-    <form method="post">
+    <form method="post" name="formR" id="formR">
         <div class="col-md-8">
      <div class="form-group ">
       <label class="control-label requiredField" for="recipeTitle">
        Recipe Title
-       <span class="required">
+       <span class="required" name="rTitle" id="rTitle">
         *
        </span>
       </label>
@@ -35,7 +35,7 @@
      <div class="form-group ">
       <label class="control-label requiredField" for="description">
        Short Description
-       <span class="required">
+       <span class="required" name="rDescription" id="rDescription">
         *
        </span>
       </label>
@@ -47,7 +47,7 @@
      <div class="form-group ">
       <label class="control-label requiredField" for="recipeDetails">
        Recipe Details
-       <span class="required">
+       <span class="required" name="rDetails" id="rDetails">
         *
        </span>
       </label>
@@ -58,7 +58,7 @@
      </div>
      <div class="form-group">
       <div>
-       <button class="btn btn-primary " name="submit" type="submit">
+       <button class="btn btn-primary" name="submit" type="submit" onclick="return checkInput()">
         Submit
        </button>
       </div>
@@ -67,10 +67,9 @@
         <div class="col-md-4">
             <div class="selectPadding"></div>
             <div class="panel panel-default">
-                <div class="panel-heading">Select Catagory</div>
+                <div class="panel-heading">Select Catagory <span class="required" name="rCat" id="rCat">*</span></div>
                 <div class="panel-body">
-                <div class="selectContainer">
-                <select name="Catagory" class="form-control" multiple title="Choose a Catagory">
+                <select name="Catagory" id="Catagory" class="form-control" multiple title="Choose a Catagory">
                     <option value="Dinner">Dinner</option>
                     <option value="Breakfast">Breakfast</option>
                     <option value="Desert">Desert</option>
@@ -85,5 +84,37 @@
   </div>
 <div class="col-md-2"></div>
  </div>
+
+<script type="text/javascript">
+
+            function checkInput()
+            {
+                var rTitle = document.getElementById("rTitle");
+                var rDescription = document.getElementById("rDescription");
+                var rDetails = document.getElementById("rDetails");
+                result = true;
+                if(!formR.recipeTitle.value)
+                {
+                    rTitle.innerText = "* Please provide Title";
+                    result = false;
+                }
+                if(!formR.description.value)
+                {
+                    rDescription.innerText = "* Please provide Description";
+                    result = false;
+                }
+                if(!formR.recipeDetails.value)
+                {
+                    rDetails.innerText = "* Please provide Details";
+                    result = false;
+                }
+                if(!formR.Catagory.value)
+                {
+                    rCat.innerText = "* Please provide a Catagory";
+                    result = false;
+                }
+                return result;    
+            }
+</script>
 </body>
 </html>

@@ -36,3 +36,5 @@
 [07-Oct-2017 18:24:39 America/Chicago] [IT355/RecipeFatFree/index.php:70] Base->run()
 [07-Oct-2017 18:25:33 America/Chicago] HTTP 404 (GET /Test%20img)
 [07-Oct-2017 18:25:33 America/Chicago] [IT355/RecipeFatFree/index.php:70] Base->run()
+[07-Oct-2017 18:56:06 America/Chicago] HTTP 404 (GET /Test%20img)
+[07-Oct-2017 18:56:06 America/Chicago] [IT355/RecipeFatFree/index.php:70] Base->run()
