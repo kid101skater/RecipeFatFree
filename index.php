@@ -46,6 +46,8 @@ require("../../../other/recipe_config.php");
         $f3->set('header','pages/navbar.html');
         $recipe = $db->GetRecipe($recipeID);
         $f3->set('recipe', $recipe);
+        $randoms = $db->GetThreeRecipes();
+        $f3->set('randoms', $randoms);
         
         echo Template::instance()->render('pages/recipe.html');
     });

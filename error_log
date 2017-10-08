@@ -160,3 +160,17 @@
 [07-Oct-2017 22:23:32 America/Chicago] [IT355/RecipeFatFree/index.php:92] Base->run()
 [07-Oct-2017 22:48:23 America/Chicago] HTTP 404 (GET /Catagory/Dinner)
 [07-Oct-2017 22:48:23 America/Chicago] [IT355/RecipeFatFree/index.php:101] Base->run()
+[07-Oct-2017 23:23:26 America/Chicago] Call to undefined method Database::GetThreeRecipes() [/home/klocke/public_html/IT355/RecipeFatFree/index.php:50]
+[07-Oct-2017 23:23:26 America/Chicago] [IT355/RecipeFatFree/index.php:114] Base->run()
+[07-Oct-2017 23:23:46 America/Chicago] Call to undefined method Database::GetThreeRecipes() [/home/klocke/public_html/IT355/RecipeFatFree/index.php:50]
+[07-Oct-2017 23:23:46 America/Chicago] [IT355/RecipeFatFree/index.php:114] Base->run()
+[07-Oct-2017 23:23:48 America/Chicago] Call to undefined method Database::GetThreeRecipes() [/home/klocke/public_html/IT355/RecipeFatFree/index.php:50]
+[07-Oct-2017 23:23:48 America/Chicago] [IT355/RecipeFatFree/index.php:114] Base->run()
+[07-Oct-2017 23:23:50 America/Chicago] Call to undefined method Database::GetThreeRecipes() [/home/klocke/public_html/IT355/RecipeFatFree/index.php:50]
+[07-Oct-2017 23:23:50 America/Chicago] [IT355/RecipeFatFree/index.php:114] Base->run()
+[07-Oct-2017 23:24:29 America/Chicago] Call to undefined method Database::GetThreeRecipes() [/home/klocke/public_html/IT355/RecipeFatFree/index.php:50]
+[07-Oct-2017 23:24:29 America/Chicago] [IT355/RecipeFatFree/index.php:114] Base->run()
+[07-Oct-2017 23:24:36 America/Chicago] Call to undefined method Database::GetThreeRecipes() [/home/klocke/public_html/IT355/RecipeFatFree/index.php:50]
+[07-Oct-2017 23:24:36 America/Chicago] [IT355/RecipeFatFree/index.php:114] Base->run()
+[07-Oct-2017 23:24:38 America/Chicago] Call to undefined method Database::GetThreeRecipes() [/home/klocke/public_html/IT355/RecipeFatFree/index.php:50]
+[07-Oct-2017 23:24:38 America/Chicago] [IT355/RecipeFatFree/index.php:114] Base->run()
