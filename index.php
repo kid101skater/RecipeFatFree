@@ -54,7 +54,7 @@ require("../../../other/recipe_config.php");
     $f3->route('GET|POST /Create', function($f3) {
         
         $db = new Database();
-        if(isset($_POST['recipeTitle']))
+        if(isset($_POST['recipeTitle']) and isset($_POST['recipeDetails']) and isset($_POST['recipeDetails']) and isset($_POST['burb']) and isset($_POST['Catagory']))
         {
             echo $_POST['recipeTitle'];
             echo $_POST['recipeDetails'];
