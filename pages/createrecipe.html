@@ -18,7 +18,7 @@
 <div class="col-md-2"></div>
   <div class="row">
    <div class="col-md-8">
-    <form method="post" name="formR" id="formR">
+    <form method="post" name="formR" id="formR" enctype="multipart/form-data">
         <div class="col-md-8">
      <div class="form-group ">
       <label class="control-label requiredField" for="recipeTitle">
@@ -32,7 +32,16 @@
        Give a title to your recipe
       </span>
      </div>
+     
+     <div class="form-group">
+       <label class="control-label requiredField" for="description">
+       Provide an Image
+       </label>
+         <input class="form-control" id="recipeImg" name="recipeImg" type="file"/>
+       <hr>
+     </div>
      <div class="form-group ">
+
       <label class="control-label requiredField" for="description">
        Short Description
        <span class="required" name="rDescription" id="rDescription">

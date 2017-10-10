@@ -61,14 +61,31 @@ require("../../../other/recipe_config.php");
             echo $_POST['recipeTitle'];
             echo $_POST['recipeDetails'];
             echo $_POST['burb'];
-            if(isset($_POST['recipeImg']))
-               {
-                    $postID = $db->CreateRecipe($_POST['recipeTitle'], $_POST['recipeDetails'], $_POST['burb'], $_POST['recipeImg'], $_POST['Catagory']);
-               }
-               else
-               {
-                    $postID = $db->CreateRecipeDefault($_POST['recipeTitle'], $_POST['recipeDetails'], $_POST['burb'],  $_POST['Catagory']);
-               }
+            echo $_POST["recipeImg"];
+            echo $_FILES["recipeImg"]["name"];
+            
+            if(isset($_FILES ["recipeImg"]))
+            {
+                $pic = $_FILES["recipeImg"]["name"];
+                
+                $target_dir = "imgs/";
+                $target_file = $target_dir . basename($_FILES["recipeImg"]["name"]);
+                if (move_uploaded_file($_FILES["recipeImg"]["tmp_name"], $target_file))
+                {
+                    echo $pic;
+                    $newImg = "/imgs/" . $pic;
+                    echo $newImg;
+                }
+                else
+                {
+                    return;
+                }
+                $postID = $db->CreateRecipe($_POST['recipeTitle'], $_POST['recipeDetails'], $_POST['burb'], $newImg, $_POST['Catagory']);
+            }
+            else
+            {
+                $postID = $db->CreateRecipeDefault($_POST['recipeTitle'], $_POST['recipeDetails'], $_POST['burb'],  $_POST['Catagory']);
+            }
             $f3->reroute('/');
         }
         else

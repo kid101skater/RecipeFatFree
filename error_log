@@ -174,3 +174,9 @@
 [07-Oct-2017 23:24:36 America/Chicago] [IT355/RecipeFatFree/index.php:114] Base->run()
 [07-Oct-2017 23:24:38 America/Chicago] Call to undefined method Database::GetThreeRecipes() [/home/klocke/public_html/IT355/RecipeFatFree/index.php:50]
 [07-Oct-2017 23:24:38 America/Chicago] [IT355/RecipeFatFree/index.php:114] Base->run()
+[10-Oct-2017 17:48:13 America/Chicago] Call to a member function getRecipeImg() on null [/home/klocke/public_html/IT355/RecipeFatFree/tmp/2xmanq8xlk008.122y7ayggsyck.php:29]
+[10-Oct-2017 17:48:13 America/Chicago] [IT355/RecipeFatFree/index.php:31] Preview->render()
+[10-Oct-2017 17:48:13 America/Chicago] [IT355/RecipeFatFree/index.php:113] Base->run()
+[10-Oct-2017 18:30:35 America/Chicago] move_uploaded_file(): The second argument to copy() function cannot be a directory
+[10-Oct-2017 18:30:35 America/Chicago] [IT355/RecipeFatFree/index.php:75] move_uploaded_file()
+[10-Oct-2017 18:30:35 America/Chicago] [IT355/RecipeFatFree/index.php:132] Base->run()
