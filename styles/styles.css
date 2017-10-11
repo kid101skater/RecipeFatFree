@@ -31,3 +31,7 @@ img {
 .selectPadding {
     padding-top: 100px;
 }
+.imgmax {
+    max-height: 300px;
+    max-width: 489px;
+}

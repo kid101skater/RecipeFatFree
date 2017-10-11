@@ -21,7 +21,9 @@
             <repeat group="{{ @recipes }}" value="{{ @recipe }}">
                 <div class="col-md-4">
                     <div class="card">
-                        <img class="card-img-top img-responsive" src="{{@BASE}}{{ @recipe->getRecipeImg() }}" alt="recipe image">
+                        <center>
+                          <img class="card-img-top img-responsive imgmax" src="{{@BASE}}{{ @recipe->getRecipeImg() }}" alt="recipe image">
+                        </center>
                             <div class="card-block">
                                 <h4 class="card-title"><center>{{@recipe->getRecipeTitle()}}</center></h4>
                                 <hr>
